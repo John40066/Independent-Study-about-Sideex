@@ -3,6 +3,15 @@
     "name": "Extension Test",
     "description": "Try To Make a Web Extension",
     "version": "0.2.0",
+    "chrome_url_overrides": {
+        "newtab": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
     "browser_action": {
         "browser_style": true,
         "default_icon": {
@@ -20,7 +29,7 @@
         "128": "images/get_started128.png"
     },
     "permissions": [
-        "tabs",
+        "tab",
         "activeTab",
         "alarms"
     ]
